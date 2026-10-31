@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Portfolio | Defense-Grade Cybersecurity & Systems Analyst</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#090A0F',
+                        'obsidian-card': 'rgba(18, 20, 29, 0.75)',
+                        champagne: {
+                            100: '#FFF8E7',
+                            300: '#E6D3A3',
+                            400: '#D4AF37',
+                            500: '#C5A059',
+                            600: '#A38038',
+                        },
+                        cyber: {
+                            cyan: '#00F0FF',
+                            gold: '#DFB15B',
+                            red: '#FF3366',
+                            emerald: '#10B981',
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'luxury-gradient': 'radial-gradient(circle at 50% 0%, rgba(197, 160, 89, 0.15) 0%, rgba(9, 10, 15, 0.95) 70%)',
+                        'card-border': 'linear-gradient(135deg, rgba(212, 175, 55, 0.3) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(0, 240, 255, 0.15) 100%)',
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 25px -5px rgba(197, 160, 89, 0.3)',
+                        'cyber-glow': '0 0 25px -5px rgba(0, 240, 255, 0.25)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Custom Scrollbar & Luxury Visual Touches */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090A0F;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A2E3D;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C5A059;
+        }
+
+        .glass-panel {
+            background: rgba(15, 17, 26, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .glass-panel-interactive {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .glass-panel-interactive:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px -10px rgba(197, 160, 89, 0.25);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF8E7 0%, #D4AF37 50%, #A38038 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .silver-gradient-text {
+            background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Subtle grid pattern background */
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        /* Scanline effect for terminal */
+        .scanline {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.3));
+            background-size: 100% 4px;
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-slate-300 font-sans antialiased selection:bg-champagne-500 selection:text-obsidian min-h-screen relative overflow-x-hidden bg-grid-pattern">
+
+    <!-- Ambient Glow Backgrounds -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-luxury-gradient pointer-events-none -z-10 blur-3xl opacity-80"></div>
+    <div class="fixed bottom-0 right-0 w-[400px] h-[400px] bg-cyber-cyan/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+    <!-- MAIN HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-champagne-500/20 px-4 lg:px-8 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <!-- Executive Branding -->
+            <a href="#" onclick="switchTab('hero')" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg border border-champagne-400/40 bg-obsidian flex items-center justify-center text-champagne-400 group-hover:border-champagne-400 group-hover:shadow-gold-glow transition-all">
+                    <i class="fa-solid me-0 fa-shield-halved text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-cinzel text-lg font-bold tracking-wider text-slate-100 block leading-tight">B. <span class="gold-gradient-text">WILLIAMS</span></span>
+                    <span class="font-mono text-[10px] text-champagne-500/80 tracking-widest uppercase block">USSF / USAF Veteran & Cyber Systems Operations Lead</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Tabs -->
+            <nav class="hidden md:flex items-center gap-1 bg-obsidian/80 p-1.5 rounded-full border border-slate-800">
+                <button onclick="switchTab('hero')" id="nav-hero" class="nav-btn px-4 py-2 rounded-full text-xs font-medium tracking-wider uppercase transition-all duration-300 text-champagne-400 bg-champagne-500/10 border border-champagne-500/30">
+                    <i class="fa-solid fa-house me-1.5 text-[10px]"></i> Overview
+                </button>
+                <button onclick="switchTab('military')" id="nav-military" class="nav-btn px-4 py-2 rounded-full text-xs font-medium tracking-wider uppercase transition-all duration-300 text-slate-400 hover:text-slate-200 hover:bg-white/5">
+                    <i class="fa-solid fa-award me-1.5 text-[10px]"></i> Career & Military
+                </button>
+                <button onclick="switchTab('methodology')" id="nav-methodology" class="nav-btn px-4 py-2 rounded-full text-xs font-medium tracking-wider uppercase transition-all duration-300 text-slate-400 hover:text-slate-200 hover:bg-white/5">
+                    <i class="fa-solid fa-diagram-project me-1.5 text-[10px]"></i> Methodology
+                </button>
+                <button onclick="switchTab('projects')" id="nav-projects" class="nav-btn px-4 py-2 rounded-full text-xs font-medium tracking-wider uppercase transition-all duration-300 text-slate-400 hover:text-slate-200 hover:bg-white/5">
+                    <i class="fa-solid fa-folder-open me-1.5 text-[10px]"></i> Projects
+                </button>
+                <button onclick="switchTab('terminal')" id="nav-terminal" class="nav-btn px-4 py-2 rounded-full text-xs font-medium tracking-wider uppercase transition-all duration-300 text-slate-400 hover:text-slate-200 hover:bg-white/5">
+                    <i class="fa-solid fa-terminal me-1.5 text-[10px]"></i> Cyber Lab
+                </button>
+                <button onclick="switchTab('skills')" id="nav-skills" class="nav-btn px-4 py-2 rounded-full text-xs font-medium tracking-wider uppercase transition-all duration-300 text-slate-400 hover:text-slate-200 hover:bg-white/5">
+                    <i class="fa-solid fa-layer-group me-1.5 text-[10px]"></i> Matrix
+                </button>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="hidden lg:flex items-center gap-4">
+                <button onclick="switchTab('contact')" class="px-5 py-2.5 rounded-lg border border-champagne-400/50 text-champagne-300 font-cinzel text-xs font-semibold tracking-widest uppercase hover:bg-champagne-500/10 hover:border-champagne-400 hover:shadow-gold-glow transition-all">
+                    Initiate Contact
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-slate-300 hover:text-champagne-400 p-2">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-slate-800 flex flex-col gap-2">
+            <button onclick="switchTab('hero'); toggleMobileMenu()" class="text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-champagne-500/10 hover:text-champagne-400">
+                <i class="fa-solid fa-house me-2"></i> Overview
+            </button>
+            <button onclick="switchTab('military'); toggleMobileMenu()" class="text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-champagne-500/10 hover:text-champagne-400">
+                <i class="fa-solid fa-award me-2"></i> USSF / USAF Experience
+            </button>
+            <button onclick="switchTab('projects'); toggleMobileMenu()" class="text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-champagne-500/10 hover:text-champagne-400">
+                <i class="fa-solid fa-folder-open me-2"></i> Featured Projects
+            </button>
+            <button onclick="switchTab('methodology'); toggleMobileMenu()" class="text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-champagne-500/10 hover:text-champagne-400">
+                <i class="fa-solid fa-diagram-project me-2"></i> Steps Taken (Methodology)
+            </button>
+            <button onclick="switchTab('terminal'); toggleMobileMenu()" class="text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-champagne-500/10 hover:text-champagne-400">
+                <i class="fa-solid fa-terminal me-2"></i> Audit Diagnostic Lab
+            </button>
+            <button onclick="switchTab('skills'); toggleMobileMenu()" class="text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-champagne-500/10 hover:text-champagne-400">
+                <i class="fa-solid fa-layer-group me-2"></i> Skills & Certifications
+            </button>
+            <button onclick="switchTab('contact'); toggleMobileMenu()" class="text-left px-4 py-2.5 rounded-lg text-sm font-medium text-champagne-400 border border-champagne-500/30 bg-champagne-500/10">
+                <i class="fa-solid fa-paper-plane me-2"></i> Executive Contact
+            </button>
+        </div>
+    </header>
+
+    <!-- CONTENT WRAPPER -->
+    <main class="max-w-7xl mx-auto px-4 lg:px-8 py-8 min-h-[calc(100vh-160px)]">
+
+        <!-- ================= PAGE 1: HERO / EXECUTIVE OVERVIEW ================= -->
+        <section id="page-hero" class="tab-page block space-y-16 animate-fadeIn">
+            
+            <!-- Hero Banner Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-6 lg:pt-12">
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <!-- Top Security Clearance Eligibility Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-champagne-400/40 bg-champagne-500/10 text-champagne-300 text-xs font-mono tracking-wider uppercase shadow-gold-glow">
+                        <span class="w-2 h-2 rounded-full bg-cyber-cyan animate-pulse"></span>
+                        Eligibility: Secret / TS/SCI Clearable (Eligible for Sponsorship / Reinstatement)
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="font-cinzel text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
+                        Defense-Grade <br/>
+                        <span class="gold-gradient-text">Systems Architecture</span> & Cyber Operations
+                    </h1>
+
+                    <!-- Paragraph description -->
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-light">
+                        Former United States Air Force & Space Force <strong class="text-champagne-300 font-medium">Cyber Systems Operations Specialist</strong> and <strong class="text-champagne-300 font-medium">Mission Assurance Supervisor</strong>. Expertise in $50M enterprise network defense, evaluating 104K STIG line items, ACAS vulnerability audits across 3,000+ assets, Active Directory/GPO management, and cloud architecture troubleshooting.
+                    </p>
+
+                    <!-- CTA Group -->
+                    <div class="flex flex-wrap items-center gap-4 pt-4">
+                        <button onclick="switchTab('military')" class="px-7 py-3.5 rounded-lg bg-gradient-to-r from-champagne-500 to-champagne-600 text-obsidian font-cinzel font-bold text-xs tracking-widest uppercase hover:shadow-gold-glow hover:brightness-110 transition-all">
+                            View Work Experience <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </button>
+                        <button onclick="switchTab('methodology')" class="px-7 py-3.5 rounded-lg border border-slate-700 hover:border-champagne-400/50 bg-obsidian-card text-slate-200 font-cinzel text-xs font-medium tracking-widest uppercase transition-all">
+                            Systems Methodology
+                        </button>
+                    </div>
+
+                    <!-- Highlighted Stats Matrix -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-800/80">
+                        <div>
+                            <div class="font-cinzel text-2xl lg:text-3xl font-bold text-white">104K</div>
+                            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider mt-1">STIG Line Items Evaluated</div>
+                        </div>
+                        <div>
+                            <div class="font-cinzel text-2xl lg:text-3xl font-bold text-champagne-400">3,000+</div>
+                            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider mt-1">IT Assets Audited (ACAS)</div>
+                        </div>
+                        <div>
+                            <div class="font-cinzel text-2xl lg:text-3xl font-bold text-white">60%</div>
+                            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider mt-1">Incident Reduction Rate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column Visual: Hologram / Emblem Graphic -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-md aspect-square rounded-2xl p-1 bg-card-border shadow-2xl glass-panel">
+                        <div class="w-full h-full rounded-xl bg-obsidian/90 p-6 flex flex-col justify-between relative overflow-hidden">
+                            <!-- Background Emblem Pattern -->
+                            <div class="absolute -right-10 -bottom-10 opacity-10 text-champagne-400">
+                                <i class="fa-solid fa-server text-[240px]"></i>
+                            </div>
+
+                            <!-- Header inside graphic -->
+                            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 rounded-full bg-champagne-400"></span>
+                                    <span class="font-mono text-xs text-slate-300 font-semibold tracking-wider">ENTERPRISE SYSTEM MATRIX</span>
+                                </div>
+                                <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-mono text-[10px] border border-emerald-500/20">HEALTHY</span>
+                            </div>
+
+                            <!-- Live Telemetry Simulator Box -->
+                            <div class="space-y-4 my-6 font-mono text-xs">
+                                <div class="bg-obsidian/80 p-3.5 rounded-lg border border-slate-800 space-y-2">
+                                    <div class="flex justify-between text-slate-400 text-[11px]">
+                                        <span>PRIMARY ROLE:</span>
+                                        <span class="text-champagne-300 font-semibold">Cyber Systems Operations</span>
+                                    </div>
+                                    <div class="flex justify-between text-slate-400 text-[11px]">
+                                        <span>INFRASTRUCTURE:</span>
+                                        <span class="text-slate-200">USSF/USAF Domain Enclaves</span>
+                                    </div>
+                                    <div class="flex justify-between text-slate-400 text-[11px]">
+                                        <span>HARDENING baseline:</span>
+                                        <span class="text-cyber-cyan">DISA STIG / ACAS Compliant</span>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <div class="flex justify-between text-[11px] text-slate-400">
+                                        <span>SYSTEM INTEGRITY</span>
+                                        <span class="text-champagne-400">99.999%</span>
+                                    </div>
+                                    <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-gradient-to-r from-champagne-500 to-cyber-cyan w-[99.9%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Footer Card Info -->
+                            <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                                <span class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server text-champagne-400"></i> Mission Assurance Systems
+                                </span>
+                                <span class="font-mono text-[10px] text-slate-500">DEFENSE COMPLIANT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Pillar Cards -->
+            <div class="pt-12">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-white">Core Pillars</h2>
+                    <p class="text-slate-400 text-sm mt-2">Hands-on Cyber Systems Operations, server deployment, automated risk compliance, and cloud architecture troubleshooting.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Pillar 1 -->
+                    <div class="glass-panel glass-panel-interactive p-8 rounded-2xl relative group">
+                        <div class="w-12 h-12 rounded-xl bg-cyber-cyan/10 border border-cyber-cyan/30 flex items-center justify-center text-cyber-cyan mb-6 group-hover:bg-cyber-cyan group-hover:text-obsidian transition-all">
+                            <i class="fa-solid fa-server text-xl"></i>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white mb-3">Cyber Systems Operations</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Evaluating 104K STIG line items, deploying Windows/Linux enterprise servers, executing ACAS vulnerability upgrades, Active Directory/GPO enforcement, and PowerShell automation across 4,200+ systems.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="glass-panel glass-panel-interactive p-8 rounded-2xl relative group">
+                        <div class="w-12 h-12 rounded-xl bg-champagne-500/10 border border-champagne-400/30 flex items-center justify-center text-champagne-400 mb-6 group-hover:bg-champagne-500 group-hover:text-obsidian transition-all">
+                            <i class="fa-solid fa-shield-halved text-xl"></i>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white mb-3">Mission Assurance & Root Cause Analysis</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Administering 100+ critical user accounts with 100% security compliance. Directed semi-annual cybersecurity inspections and root-cause remediation that reduced security incidents by 60% over three quarters.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="glass-panel glass-panel-interactive p-8 rounded-2xl relative group">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-400/30 flex items-center justify-center text-purple-300 mb-6 group-hover:bg-purple-500 group-hover:text-obsidian transition-all">
+                            <i class="fa-solid fa-cloud text-xl"></i>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white mb-3">Cloud Systems & Virtualization</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Provisioning cloud infrastructure, VM creation, storage tiers, and cloud network architecture. Simulated diagnostic exercises to identify resource constraints and system disruptions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 2: MILITARY CAREER (USAF / USSF) ================= -->
+        <section id="page-military" class="tab-page hidden space-y-12 animate-fadeIn">
+            
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 text-champagne-400 text-xs font-mono tracking-widest uppercase mb-2">
+                    <i class="fa-solid fa-user-shield"></i> Honorable Military & Technical Service
+                </div>
+                <div class="flex flex-wrap items-center gap-3">
+                    <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white">Career Experience Breakdown</h2>
+                    <span class="px-3 py-1 rounded-full bg-champagne-500/10 border border-champagne-400/40 text-champagne-300 font-mono text-xs uppercase">Secret / TS/SCI Clearable</span>
+                </div>
+                <p class="text-slate-400 text-sm sm:text-base mt-2">
+                    Detailed job responsibilities and technical accomplishments across Allegiant Vets IT Cloud Technologies, United States Space Force, and United States Air Force Cyber Systems Operations.
+                </p>
+            </div>
+
+            <!-- Detailed Timeline Cards -->
+            <div class="space-y-8">
+
+                <!-- Role 1: Allegiant Vets -->
+                <div class="glass-panel p-8 rounded-2xl border-l-4 border-l-purple-400 relative">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <span class="px-2.5 py-1 rounded bg-purple-500/10 border border-purple-500/30 text-purple-300 font-mono text-xs uppercase">Allegiant Vets</span>
+                                <span class="text-slate-500 text-xs font-mono">40 Hours / Week</span>
+                            </div>
+                            <h3 class="font-cinzel text-2xl font-bold text-white mt-2">IT Cloud Technologies Intern</h3>
+                            <p class="text-purple-300/80 text-sm font-mono mt-1">Remote</p>
+                        </div>
+                        <div class="text-left lg:text-right font-mono text-xs text-slate-400 bg-obsidian/60 p-3 rounded-lg border border-slate-800">
+                            <div><i class="fa-regular fa-calendar me-1"></i> 11/2023 – 03/2024</div>
+                            <div class="text-slate-500 mt-1"><i class="fa-solid fa-laptop me-1"></i> Remote</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 space-y-4">
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed list-disc list-inside marker:text-purple-400">
+                            <li><strong class="text-slate-100">Cloud Architecture & Hands-on Training:</strong> Completed rigorous coursework and guided lab modules on Coursera, mastering practical skills in provisioning cloud infrastructure, storage tiers, virtual machine creation, and cloud network architecture.</li>
+                            <li><strong class="text-slate-100">Simulated Technical Troubleshooting:</strong> Executed interactive simulation exercises focused on cloud diagnostic tools to identify and troubleshoot resource allocation constraints, connectivity issues, and system disruptions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 2: US Space Force Supervisor -->
+                <div class="glass-panel p-8 rounded-2xl border-l-4 border-l-champagne-400 relative">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <span class="px-2.5 py-1 rounded bg-champagne-500/10 border border-champagne-500/30 text-champagne-300 font-mono text-xs uppercase">United States Space Force</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 font-mono text-xs uppercase">Colorado Springs, CO</span>
+                            </div>
+                            <h3 class="font-cinzel text-2xl font-bold text-white mt-2">Supervisor, Mission Assurance Systems</h3>
+                            <p class="text-champagne-400/80 text-sm font-mono mt-1">Colorado Springs, CO • 40+ Hours / Week</p>
+                        </div>
+                        <div class="text-left lg:text-right font-mono text-xs text-slate-400 bg-obsidian/60 p-3 rounded-lg border border-slate-800">
+                            <div><i class="fa-regular fa-calendar me-1"></i> 06/2022 – 05/2024</div>
+                            <div class="text-slate-500 mt-1"><i class="fa-solid fa-location-dot me-1"></i> Colorado Springs, CO</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 space-y-4">
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed list-disc list-inside marker:text-champagne-400">
+                            <li><strong class="text-slate-100">System Administration & Account Management:</strong> Supervised direct reports and administered 100+ critical user accounts on the Space Force network with 100% security compliance and zero discrepancies.</li>
+                            <li><strong class="text-slate-100">Incident Reduction & Root Cause Analysis:</strong> Directed semi-annual cybersecurity inspections; identified 22 security incidents and led root-cause remediation that reduced security incidents by 60% over three consecutive quarters.</li>
+                            <li><strong class="text-slate-100">Weapon System Maintenance & Testing:</strong> Tested and validated 30 operational procedures for joint military force space systems, delivering procedural updates that maintained system readiness and secured Space Force operational approval.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 3: USSF / USAF Cyber Operations Team Leader -->
+                <div class="glass-panel p-8 rounded-2xl border-l-4 border-l-cyber-cyan relative">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <span class="px-2.5 py-1 rounded bg-cyber-cyan/10 border border-cyber-cyan/30 text-cyber-cyan font-mono text-xs uppercase">United States Space Force / Air Force</span>
+                                <span class="px-2.5 py-1 rounded bg-cyber-cyan/20 text-cyber-cyan font-mono text-xs uppercase">Primary Duty</span>
+                            </div>
+                            <h3 class="font-cinzel text-2xl font-bold text-white mt-2">Cyber Operations Team Leader</h3>
+                            <p class="text-cyber-cyan/80 text-sm font-mono mt-1">Del Rio, TX • 40+ Hours / Week</p>
+                        </div>
+                        <div class="text-left lg:text-right font-mono text-xs text-slate-400 bg-obsidian/60 p-3 rounded-lg border border-slate-800">
+                            <div><i class="fa-regular fa-calendar me-1"></i> 01/2021 – 05/2022</div>
+                            <div class="text-slate-500 mt-1"><i class="fa-solid fa-location-dot me-1"></i> Del Rio, TX</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 space-y-4">
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed list-disc list-inside marker:text-cyber-cyan">
+                            <li><strong class="text-slate-100">Vulnerability & Compliance Management:</strong> Directed Assured Compliance Assessment Solution (ACAS) scanner upgrades, performing security audits across 3,000+ IT assets and reducing Windows Deployment System vulnerability risk from 4% down to 1%.</li>
+                            <li><strong class="text-slate-100">Server Deployment & Modernization:</strong> Led a 2-person server deployment team building and configuring Windows servers; customized directory structures, storage allocations, and 3,000 baseline settings in support of a pilot training mission.</li>
+                            <li><strong class="text-slate-100">Active Directory & Endpoint Defense:</strong> Managed Active Directory accounts, GPOs, and server objects across Windows and Red Hat Linux platforms; virtualized two DoD antivirus servers to modernize endpoint defenses base-wide.</li>
+                            <li><strong class="text-slate-100">System Remediation:</strong> Identified and remediated 114 non-compliant/at-risk systems by collaborating with six external partner organizations to push 315 critical network updates.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 4: USAF Cyber Systems Operations Technician -->
+                <div class="glass-panel p-8 rounded-2xl border-l-4 border-l-cyber-cyan relative">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <span class="px-2.5 py-1 rounded bg-cyber-cyan/10 border border-cyber-cyan/30 text-cyber-cyan font-mono text-xs uppercase">United States Air Force</span>
+                                <span class="px-2.5 py-1 rounded bg-cyber-cyan/20 text-cyber-cyan font-mono text-xs uppercase">Primary Duty</span>
+                            </div>
+                            <h3 class="font-cinzel text-2xl font-bold text-white mt-2">Cyber Systems Operations Technician</h3>
+                            <p class="text-cyber-cyan/80 text-sm font-mono mt-1">Spangdahlem AB, Germany & Various Locations • 40+ Hours / Week</p>
+                        </div>
+                        <div class="text-left lg:text-right font-mono text-xs text-slate-400 bg-obsidian/60 p-3 rounded-lg border border-slate-800">
+                            <div><i class="fa-regular fa-calendar me-1"></i> 05/2018 – 01/2021</div>
+                            <div class="text-slate-500 mt-1"><i class="fa-solid fa-location-dot me-1"></i> Spangdahlem AB, Germany</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 space-y-4">
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed list-disc list-inside marker:text-cyber-cyan">
+                            <li><strong class="text-slate-100">Enterprise Network Security ($50M Asset Baseline):</strong> Enforced cybersecurity standards across 4,200 hardware/software systems; evaluated 104K STIG line items and applied 780 security controls to eliminate 32,000 vulnerabilities on a $50M enterprise network.</li>
+                            <li><strong class="text-slate-100">Server Administration & Patching:</strong> Maintained 20 enterprise servers supporting 5,000 users across 5 global sites; executed 110 software patches and deployed 2 upgraded virtual servers using PowerShell automation scripts.</li>
+                            <li><strong class="text-slate-100">Access Control & Identity Management:</strong> Managed Active Directory permissions, DHCP IP address reservations, and share drive access controls to prevent unauthorized data access and preserve data integrity.</li>
+                            <li><strong class="text-slate-100">Patriot Excalibur:</strong> Provided SQL database administration to support Spangdahlem AFB pilots in accordance with SOPs.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= PAGE 3: FEATURED PROJECTS ================= -->
+        <section id="page-projects" class="tab-page hidden space-y-12 animate-fadeIn">
+            
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 text-champagne-400 text-xs font-mono tracking-widest uppercase mb-2">
+                    <i class="fa-solid fa-folder-open"></i> Technical Portfolio
+                </div>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white">Featured Portfolio Projects</h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-2">
+                    Practical cybersecurity tools, automated compliance auditing scripts, SIEM logging engines, and cloud resource management prototypes built around defense-grade standards.
+                </p>
+            </div>
+
+            <!-- Project Filter Tabs -->
+            <div class="flex flex-wrap gap-2 border-b border-slate-800 pb-4">
+                <button onclick="filterProjects('all')" class="project-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase bg-champagne-500 text-obsidian font-bold">All Projects</button>
+                <button onclick="filterProjects('sysops')" class="project-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase bg-obsidian-card text-slate-400 border border-slate-800 hover:text-slate-200">SysOps & Automation</button>
+                <button onclick="filterProjects('rmf')" class="project-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase bg-obsidian-card text-slate-400 border border-slate-800 hover:text-slate-200">RMF & Auditing</button>
+                <button onclick="filterProjects('cloud')" class="project-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase bg-obsidian-card text-slate-400 border border-slate-800 hover:text-slate-200">Cloud & Architecture</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Project 1 -->
+                <div class="project-card sysops rmf glass-panel p-8 rounded-2xl border border-slate-800 hover:border-champagne-400/40 transition-all flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded bg-champagne-500/10 border border-champagne-500/30 text-champagne-300 font-mono text-[11px] uppercase">RMF & Compliance</span>
+                            <span class="text-slate-500 font-mono text-xs"><i class="fa-solid fa-code-branch me-1"></i> Python / PowerShell</span>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white">Automated STIG Baseline Auditor & Remediation Tool</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Command-line and script framework designed to scan Windows/Linux server baselines against DISA STIG guidelines, generate gap reports, and push automated remediation GPOs.
+                        </p>
+                        <div class="bg-obsidian/80 p-4 rounded-xl border border-slate-800/80 space-y-2">
+                            <span class="text-[10px] font-mono text-champagne-400 uppercase tracking-wider block font-semibold"><i class="fa-solid fa-star me-1"></i> Key Demo Feature:</span>
+                            <p class="text-slate-300 text-xs font-mono">Automated compliance verification engine reducing manual STIG line item reviews by over 70%.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">PowerShell</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">DISA STIG</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Python</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Active Directory</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-end">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg border border-champagne-400/40 text-champagne-300 font-mono text-xs hover:bg-champagne-500/10 transition-all flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card sysops glass-panel p-8 rounded-2xl border border-slate-800 hover:border-champagne-400/40 transition-all flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded bg-cyber-cyan/10 border border-cyber-cyan/30 text-cyber-cyan font-mono text-[11px] uppercase">SysOps & Automation</span>
+                            <span class="text-slate-500 font-mono text-xs"><i class="fa-solid fa-server me-1"></i> Active Directory / PS</span>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white">Enterprise Active Directory & GPO Deployment Suite</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Automated Active Directory object configuration toolkit for bootstrapping new network enclaves, configuring DHCP reservations, and applying baseline security policies.
+                        </p>
+                        <div class="bg-obsidian/80 p-4 rounded-xl border border-slate-800/80 space-y-2">
+                            <span class="text-[10px] font-mono text-cyber-cyan uppercase tracking-wider block font-semibold"><i class="fa-solid fa-star me-1"></i> Key Demo Feature:</span>
+                            <p class="text-slate-300 text-xs font-mono">Bulk user/OU provisioning with pre-hardened RBAC templates and GPO health validation.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">PowerShell</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Windows Server</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Active Directory</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">DHCP / DNS</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-end">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg border border-champagne-400/40 text-champagne-300 font-mono text-xs hover:bg-champagne-500/10 transition-all flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card cloud glass-panel p-8 rounded-2xl border border-slate-800 hover:border-champagne-400/40 transition-all flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded bg-purple-500/10 border border-purple-500/30 text-purple-300 font-mono text-[11px] uppercase">Cloud & Architecture</span>
+                            <span class="text-slate-500 font-mono text-xs"><i class="fa-solid fa-cloud me-1"></i> Terraform / AWS</span>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white">Hybrid Cloud Diagnostic & Resource Allocation Monitor</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Cloud infrastructure monitoring portal simulating virtual machine deployment, storage tier provisioning, resource constraint detection, and connectivity diagnostics.
+                        </p>
+                        <div class="bg-obsidian/80 p-4 rounded-xl border border-slate-800/80 space-y-2">
+                            <span class="text-[10px] font-mono text-purple-300 uppercase tracking-wider block font-semibold"><i class="fa-solid fa-star me-1"></i> Key Demo Feature:</span>
+                            <p class="text-slate-300 text-xs font-mono">Automated resource reallocation engine to resolve VM bottleneck constraints in real-time.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">AWS / Cloud</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Terraform</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Python</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">CloudWatch</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-end">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg border border-champagne-400/40 text-champagne-300 font-mono text-xs hover:bg-champagne-500/10 transition-all flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card sysops rmf glass-panel p-8 rounded-2xl border border-slate-800 hover:border-champagne-400/40 transition-all flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded bg-cyber-cyan/10 border border-cyber-cyan/30 text-cyber-cyan font-mono text-[11px] uppercase">SysOps & SIEM</span>
+                            <span class="text-slate-500 font-mono text-xs"><i class="fa-solid fa-shield-halved me-1"></i> SIEM / ACAS</span>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white">Threat Hunting & Incident Response Playbook Engine</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Security log correlation engine designed to catch lateral movement, privilege escalation, and unauthorized file access across enterprise Windows/Linux domains.
+                        </p>
+                        <div class="bg-obsidian/80 p-4 rounded-xl border border-slate-800/80 space-y-2">
+                            <span class="text-[10px] font-mono text-cyber-cyan uppercase tracking-wider block font-semibold"><i class="fa-solid fa-star me-1"></i> Key Demo Feature:</span>
+                            <p class="text-slate-300 text-xs font-mono">Automated incident response playbooks that trigger host isolation, log preservation, and MITRE ATT&CK mapping.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Splunk SPL</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Sigma Rules</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">YARA</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Python</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-end">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg border border-champagne-400/40 text-champagne-300 font-mono text-xs hover:bg-champagne-500/10 transition-all flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card sysops glass-panel p-8 rounded-2xl border border-slate-800 hover:border-champagne-400/40 transition-all lg:col-span-2 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 font-mono text-[11px] uppercase">SysOps & Automation</span>
+                            <span class="text-slate-500 font-mono text-xs"><i class="fa-solid fa-gears me-1"></i> Ansible / SNMP</span>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white">System Infrastructure & Hardware Inventory Tracker</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Automated network topology collector and inventory management system designed for tracking server clusters, router/switch configurations, and asset health across enterprise enclaves.
+                        </p>
+                        <div class="bg-obsidian/80 p-4 rounded-xl border border-slate-800/80 space-y-2">
+                            <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-wider block font-semibold"><i class="fa-solid fa-star me-1"></i> Key Demo Feature:</span>
+                            <p class="text-slate-300 text-xs font-mono">Live network asset visualizer, automated configuration drift detection, and SNMP polling with alert notifications for offline server nodes.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Python</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Ansible</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">FastAPI</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">PostgreSQL</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">SNMP</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-end">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg border border-champagne-400/40 text-champagne-300 font-mono text-xs hover:bg-champagne-500/10 transition-all flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= PAGE 4: INTERACTIVE DIAGNOSTIC TERMINAL / LAB ================= -->
+        <section id="page-terminal" class="tab-page hidden space-y-8 animate-fadeIn">
+            
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 text-cyber-cyan text-xs font-mono tracking-widest uppercase mb-2">
+                    <i class="fa-solid fa-code"></i> Live Simulation Engine
+                </div>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white">System Operations & Audit Console</h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-2">
+                    Execute interactive security diagnostics, simulate ACAS vulnerability scans, evaluate STIG compliance, or inspect enterprise server health logs.
+                </p>
+            </div>
+
+            <!-- Terminal Window Container -->
+            <div class="rounded-2xl border border-slate-800 bg-obsidian overflow-hidden shadow-2xl font-mono text-xs">
+                
+                <!-- Terminal Header Bar -->
+                <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                        <span class="ms-2 text-slate-400 text-[11px]">USSF-AF-CONSOLE :: SYSOPS_AUDIT_TOOL v4.2</span>
+                    </div>
+                    <div class="text-slate-500 text-[10px] hidden sm:block">
+                        ENCLAVE: AUTHORIZED-SYSTEM-OPERATOR
+                    </div>
+                </div>
+
+                <!-- Control Buttons Bar -->
+                <div class="p-3 bg-slate-950/60 border-b border-slate-800/80 flex flex-wrap gap-2">
+                    <button onclick="runTerminalAudit('acas')" class="px-3 py-1.5 rounded bg-cyber-cyan/10 hover:bg-cyber-cyan/20 text-cyber-cyan border border-cyber-cyan/30 transition-all">
+                        <i class="fa-solid fa-radar me-1"></i> Run ACAS Vulnerability Scan
+                    </button>
+                    <button onclick="runTerminalAudit('stig')" class="px-3 py-1.5 rounded bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 transition-all">
+                        <i class="fa-solid fa-shield-virus me-1"></i> Evaluate STIG Line Items
+                    </button>
+                    <button onclick="runTerminalAudit('server')" class="px-3 py-1.5 rounded bg-champagne-500/10 hover:bg-champagne-500/20 text-champagne-300 border border-champagne-500/30 transition-all">
+                        <i class="fa-solid fa-server me-1"></i> Verify AD & Server Baseline
+                    </button>
+                    <button onclick="clearTerminal()" class="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition-all ms-auto">
+                        <i class="fa-solid fa-eraser me-1"></i> Clear Log
+                    </button>
+                </div>
+
+                <!-- Terminal Output Display Box -->
+                <div id="terminal-body" class="p-6 h-[380px] overflow-y-auto space-y-2 bg-obsidian scanline text-slate-300 selection:bg-champagne-400 selection:text-obsidian">
+                    <p class="text-slate-500">// Welcome to B. Williams Cyber Operations Console.</p>
+                    <p class="text-slate-500">// Select an action above to execute ACAS scans, STIG evaluations, or AD server baseline checks.</p>
+                    <p class="text-champagne-400">[SYSTEM READY]: Authenticated as Cyber Systems Operations Lead.</p>
+                    <p class="text-slate-400">&gt; <span class="animate-pulse">_</span></p>
+                </div>
+
+                <!-- Footer Status Bar -->
+                <div class="px-4 py-2 bg-slate-900/60 border-t border-slate-800 text-[10px] flex justify-between text-slate-500">
+                    <span>DOMAINS: AFNET ACTIVE DIRECTORY / USSF ENCLAVE</span>
+                    <span>HARDENING: DISA STIG / ACAS SCAN COMPLIANT</span>
+                </div>
+            </div>
+
+            <!-- Terminal Explanation Panel -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                <div class="glass-panel p-6 rounded-xl border border-slate-800">
+                    <h4 class="font-cinzel text-base font-bold text-white mb-2"><i class="fa-solid fa-network-wired text-emerald-400 me-2"></i> Cyber Systems Infrastructure</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Simulates Active Directory domain controller verification, server health checks, GPO security policy distribution, and ACAS vulnerability patch automation.
+                    </p>
+                </div>
+                <div class="glass-panel p-6 rounded-xl border border-slate-800">
+                    <h4 class="font-cinzel text-base font-bold text-white mb-2"><i class="fa-solid fa-shield-halved text-champagne-400 me-2"></i> System Security & Compliance</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Demonstrates STIG baseline compliance auditing, root cause incident analysis, and patch remediation across enterprise network assets.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 5: SKILLS & CERTIFICATIONS MATRIX ================= -->
+        <section id="page-skills" class="tab-page hidden space-y-12 animate-fadeIn">
+            
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 text-champagne-400 text-xs font-mono tracking-widest uppercase mb-2">
+                    <i class="fa-solid fa-tags"></i> Professional Competencies
+                </div>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white">Skills & Certifications Matrix</h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-2">
+                    Filter skills across Cyber Systems Operations, Server Administration, ACAS / STIG Compliance, Cloud Technologies, and Certifications.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap gap-2">
+                <button onclick="filterSkills('all')" class="skill-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase bg-champagne-500 text-obsidian font-bold">All Domains</button>
+                <button onclick="filterSkills('sysops')" class="skill-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase bg-obsidian-card text-slate-400 border border-slate-800 hover:text-slate-200">Cyber SysOps</button>
+                <button onclick="filterSkills('rmf')" class="skill-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase bg-obsidian-card text-slate-400 border border-slate-800 hover:text-slate-200">ACAS & STIG Compliance</button>
+                <button onclick="filterSkills('cloud')" class="skill-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase bg-obsidian-card text-slate-400 border border-slate-800 hover:text-slate-200">Cloud & Server Admin</button>
+                <button onclick="filterSkills('cert')" class="skill-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase bg-obsidian-card text-slate-400 border border-slate-800 hover:text-slate-200">Certifications</button>
+            </div>
+
+            <!-- Skills Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Skill 1 -->
+                <div class="skill-card sysops glass-panel p-6 rounded-xl border border-slate-800 hover:border-champagne-400/40 transition-all">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-shield-halved text-2xl text-cyber-cyan"></i>
+                        <span class="px-2 py-0.5 rounded bg-cyber-cyan/10 text-cyber-cyan font-mono text-[10px]">PRIMARY</span>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-lg">Cyber Systems Operations</h3>
+                    <p class="text-slate-400 text-xs mt-2">Active Directory, GPOs, PowerShell automation, Windows & Red Hat server administration, DHCP reservations, and 3,000 baseline settings deployment.</p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="skill-card rmf glass-panel p-6 rounded-xl border border-slate-800 hover:border-champagne-400/40 transition-all">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-radar text-2xl text-purple-400"></i>
+                        <span class="px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 font-mono text-[10px]">AUDITING</span>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-lg">ACAS & STIG Compliance</h3>
+                    <p class="text-slate-400 text-xs mt-2">Evaluated 104K STIG line items, applied 780 controls across $50M enterprise network, ACAS scanning across 3,000+ assets reducing WDS risk from 4% to 1%.</p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="skill-card sysops glass-panel p-6 rounded-xl border border-slate-800 hover:border-champagne-400/40 transition-all">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-server text-2xl text-champagne-400"></i>
+                        <span class="px-2 py-0.5 rounded bg-champagne-500/10 text-champagne-300 font-mono text-[10px]">MISSION ASSURANCE</span>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-lg">Mission Assurance & Root Cause Analysis</h3>
+                    <p class="text-slate-400 text-xs mt-2">Supervised 100+ critical user accounts with zero discrepancies. Directed semi-annual cybersecurity inspections, reducing security incidents by 60%.</p>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="skill-card cloud glass-panel p-6 rounded-xl border border-slate-800 hover:border-champagne-400/40 transition-all">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-cloud text-2xl text-cyber-cyan"></i>
+                        <span class="px-2 py-0.5 rounded bg-cyber-cyan/10 text-cyber-cyan font-mono text-[10px]">CLOUD & INFRA</span>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-lg">Cloud Technologies & Virtualization</h3>
+                    <p class="text-slate-400 text-xs mt-2">Cloud infrastructure provisioning, storage tiers, virtual machine creation, network architecture, and simulated cloud diagnostic troubleshooting.</p>
+                </div>
+
+                <!-- Skill 5 -->
+                <div class="skill-card sysops glass-panel p-6 rounded-xl border border-slate-800 hover:border-champagne-400/40 transition-all">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-database text-2xl text-emerald-400"></i>
+                        <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 font-mono text-[10px]">DATABASE & SYSTEMS</span>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-lg">SQL & Patriot Excalibur</h3>
+                    <p class="text-slate-400 text-xs mt-2">SQL database administration supporting flight operations and pilot training missions; weapon system operational procedure testing and validation.</p>
+                </div>
+
+                <!-- Skill 6 (Cert) -->
+                <div class="skill-card cert glass-panel p-6 rounded-xl border-2 border-champagne-400/40 bg-champagne-500/5 transition-all">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-certificate text-2xl text-champagne-400"></i>
+                        <span class="px-2 py-0.5 rounded bg-champagne-500/20 text-champagne-300 font-mono text-[10px]">ACTIVE CERT</span>
+                    </div>
+                    <h3 class="font-cinzel font-bold text-white text-lg">CompTIA Security+ / DoD Baseline</h3>
+                    <p class="text-slate-400 text-xs mt-2">DoD 8140 / 8570.01-M IAM / IAT Level II Baseline Compliance Certified.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= PAGE 6: EXECUTIVE CONTACT ================= -->
+        <section id="page-contact" class="tab-page hidden space-y-12 animate-fadeIn">
+            
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 text-champagne-400 text-xs font-mono tracking-widest uppercase mb-2">
+                    <i class="fa-solid fa-paper-plane"></i> Direct Communication
+                </div>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white">Executive Contact</h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-2">
+                    Inquire regarding cybersecurity operations, server infrastructure engineering, system vulnerability management, or clearance sponsorship/reinstatement opportunities.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Details Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass-panel p-8 rounded-2xl space-y-6">
+                        <h3 class="font-cinzel text-xl font-bold text-white border-b border-slate-800 pb-4">Status & Details</h3>
+                        
+                        <div class="space-y-4 font-mono text-xs">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded bg-champagne-500/10 border border-champagne-500/30 flex items-center justify-center text-champagne-400 shrink-0">
+                                    <i class="fa-solid fa-id-card text-base"></i>
+                                </div>
+                                <div>
+                                    <span class="text-slate-500 block text-[10px]">CLEARANCE STATUS</span>
+                                    <span class="text-champagne-300 font-semibold">Secret / TS/SCI Clearable</span>
+                                    <span class="text-slate-400 text-[10px] block mt-0.5">Eligible for Immediate Sponsorship / Reinstatement</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded bg-champagne-500/10 border border-champagne-500/30 flex items-center justify-center text-champagne-400 shrink-0">
+                                    <i class="fa-solid fa-envelope text-base"></i>
+                                </div>
+                                <div>
+                                    <span class="text-slate-500 block text-[10px]">CONTACT EMAIL</span>
+                                    <span class="text-slate-200 font-semibold">b.williams.cyber@defense-net.us</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded bg-champagne-500/10 border border-champagne-500/30 flex items-center justify-center text-champagne-400 shrink-0">
+                                    <i class="fa-solid fa-location-dot text-base"></i>
+                                </div>
+                                <div>
+                                    <span class="text-slate-500 block text-[10px]">LOCATION BASE</span>
+                                    <span class="text-slate-200 font-semibold">Lake City, FL / Remote</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-800">
+                            <p class="text-slate-400 text-xs leading-relaxed">
+                                Available for cyber systems operations engineering, cloud infrastructure security, Active Directory automation, and system vulnerability management.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Luxury Contact Form -->
+                <div class="lg:col-span-7">
+                    <form onsubmit="handleFormSubmit(event)" class="glass-panel p-8 rounded-2xl space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-mono text-slate-300 uppercase tracking-wider">Full Name</label>
+                                <input type="text" required placeholder="Arthur Vance" class="w-full px-4 py-3 rounded-lg bg-obsidian/80 border border-slate-800 text-slate-100 focus:border-champagne-400 focus:outline-none focus:ring-1 focus:ring-champagne-400 transition-all text-xs font-mono">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-mono text-slate-300 uppercase tracking-wider">Official / Business Email</label>
+                                <input type="email" required placeholder="a.vance@company.com" class="w-full px-4 py-3 rounded-lg bg-obsidian/80 border border-slate-800 text-slate-100 focus:border-champagne-400 focus:outline-none focus:ring-1 focus:ring-champagne-400 transition-all text-xs font-mono">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-mono text-slate-300 uppercase tracking-wider">Organization / Engagement Type</label>
+                            <select class="w-full px-4 py-3 rounded-lg bg-obsidian/80 border border-slate-800 text-slate-100 focus:border-champagne-400 focus:outline-none focus:ring-1 focus:ring-champagne-400 transition-all text-xs font-mono">
+                                <option>Cyber Systems Operations Consulting</option>
+                                <option>ACAS / STIG Compliance & Audit Project</option>
+                                <option>Cloud Infrastructure & Troubleshooting</option>
+                                <option>Direct Hiring Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-mono text-slate-300 uppercase tracking-wider">Message Details</label>
+                            <textarea rows="4" required placeholder="Provide parameters or project requirements..." class="w-full px-4 py-3 rounded-lg bg-obsidian/80 border border-slate-800 text-slate-100 focus:border-champagne-400 focus:outline-none focus:ring-1 focus:ring-champagne-400 transition-all text-xs font-mono"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-lg bg-gradient-to-r from-champagne-500 to-champagne-600 text-obsidian font-cinzel font-bold text-xs tracking-widest uppercase hover:shadow-gold-glow hover:brightness-110 transition-all">
+                            Transmit Inquiry Message
+                        </button>
+
+                        <div id="form-status" class="hidden p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono text-center">
+                            <i class="fa-solid fa-circle-check me-2"></i> Transmission Successful. Expect response within 24 operational hours.
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800/80 bg-obsidian/90 py-8 text-center text-xs text-slate-500 font-mono">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                &copy; 2026 B. Williams • Cyber Systems Operations & Systems Analyst
+            </div>
+            <div class="flex items-center gap-4 text-slate-400">
+                <span class="hover:text-champagne-400 transition-colors">USSF Space Systems</span>
+                <span>•</span>
+                <span class="hover:text-champagne-400 transition-colors">USAF Cyber Systems Ops</span>
+                <span>•</span>
+                <span class="hover:text-champagne-400 transition-colors">Cloud Technologies</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Multi-view Tab Navigation Switcher
+        function switchTab(tabId) {
+            const pages = document.querySelectorAll('.tab-page');
+            pages.forEach(page => page.classList.add('hidden'));
+
+            const targetPage = document.getElementById(`page-${tabId}`);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+            }
+
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.classList.remove('text-champagne-400', 'bg-champagne-500/10', 'border', 'border-champagne-500/30');
+                btn.classList.add('text-slate-400');
+            });
+
+            const activeBtn = document.getElementById(`nav-${tabId}`);
+            if (activeBtn) {
+                activeBtn.classList.add('text-champagne-400', 'bg-champagne-500/10', 'border', 'border-champagne-500/30');
+                activeBtn.classList.remove('text-slate-400');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function selectMethodStep(stepNumber) {
+            for (let i = 1; i <= 5; i++) {
+                const btn = document.getElementById(`step-btn-${i}`);
+                if (btn) {
+                    if (i === stepNumber) {
+                        btn.className = "step-nav-btn flex items-center gap-2 font-mono text-xs text-champagne-400 font-bold";
+                        btn.querySelector('span').className = "w-6 h-6 rounded-full bg-champagne-500 text-obsidian flex items-center justify-center";
+                    } else {
+                        btn.className = "step-nav-btn flex items-center gap-2 font-mono text-xs text-slate-500 hover:text-slate-300";
+                        btn.querySelector('span').className = "w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center";
+                    }
+                }
+            }
+
+            const targetCard = document.getElementById(`step-card-${stepNumber}`);
+            if (targetCard) {
+                targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // Interactive Diagnostic Terminal Execution Simulation
+        function runTerminalAudit(type) {
+            const terminalBody = document.getElementById('terminal-body');
+            const timestamp = new Date().toISOString().split('T')[1].slice(0, 8);
+
+            let logs = [];
+
+            if (type === 'acas') {
+                logs = [
+                    `[${timestamp}] [INIT] Launching ACAS Vulnerability Scanner across 3,000+ IT Assets...`,
+                    `[${timestamp}] [SCAN] Evaluating Windows Deployment System (WDS) patch baselines...`,
+                    `[${timestamp}] [AUDIT] Identifying non-compliant endpoints and outdated patch repositories...`,
+                    `[${timestamp}] [ACTION] Deploying 315 critical network updates across partner orgs...`,
+                    `[${timestamp}] [RESULT] WDS vulnerability risk reduced from 4.0% down to 1.0%.`,
+                    `[${timestamp}] [SUCCESS] ACAS Audit Complete: 114 at-risk systems remediated.`
+                ];
+            } else if (type === 'stig') {
+                logs = [
+                    `[${timestamp}] [INIT] Parsing 104,000 STIG line items on $50M Enterprise Asset Baseline...`,
+                    `[${timestamp}] [EVAL] Verifying 780 security controls across 4,200 hardware/software systems...`,
+                    `[${timestamp}] [REMEDIATE] Applying GPOs and PowerShell automated configuration scripts...`,
+                    `[${timestamp}] [OK] Eliminating 32,000 baseline vulnerabilities across 5 global sites...`,
+                    `[${timestamp}] [SUCCESS] DISA STIG Compliance Score: 99.4% Verified.`
+                ];
+            } else if (type === 'server') {
+                logs = [
+                    `[${timestamp}] [INIT] Verifying Active Directory Domain Controllers & 20 Enterprise Servers...`,
+                    `[${timestamp}] [CHECK] Querying 5,000 active user accounts across 5 global site enclaves...`,
+                    `[${timestamp}] [DEPLOY] Executing 110 software patches via automated PowerShell script...`,
+                    `[${timestamp}] [STATUS] Virtual server baseline deployment operating with 100% compliance.`,
+                    `[${timestamp}] [SUCCESS] Active Directory GPO distribution and server audit complete.`
+                ];
+            }
+
+            let index = 0;
+            function printNextLine() {
+                if (index < logs.length) {
+                    const line = document.createElement('p');
+                    line.className = logs[index].includes('RESULT') || logs[index].includes('SUCCESS') ? 'text-emerald-400 font-bold' :
+                                     logs[index].includes('INIT') ? 'text-cyber-cyan' : 'text-slate-300';
+                    line.textContent = logs[index];
+                    terminalBody.appendChild(line);
+                    terminalBody.scrollTop = terminalBody.scrollHeight;
+                    index++;
+                    setTimeout(printNextLine, 300);
+                }
+            }
+            printNextLine();
+        }
+
+        function clearTerminal() {
+            const terminalBody = document.getElementById('terminal-body');
+            terminalBody.innerHTML = `
+                <p class="text-slate-500">// Terminal display cleared.</p>
+                <p class="text-champagne-400">[SYSTEM READY]: Authenticated as Cyber Systems Operations Lead.</p>
+                <p class="text-slate-400">&gt; <span class="animate-pulse">_</span></p>
+            `;
+        }
+
+        function filterSkills(category) {
+            const cards = document.querySelectorAll('.skill-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            const filterBtns = document.querySelectorAll('.skill-filter-btn');
+            filterBtns.forEach(btn => {
+                btn.className = "skill-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase bg-obsidian-card text-slate-400 border border-slate-800 hover:text-slate-200";
+            });
+            event.target.className = "skill-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase bg-champagne-500 text-obsidian font-bold";
+        }
+
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            const filterBtns = document.querySelectorAll('.project-filter-btn');
+            filterBtns.forEach(btn => {
+                btn.className = "project-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase bg-obsidian-card text-slate-400 border border-slate-800 hover:text-slate-200";
+            });
+            event.target.className = "project-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase bg-champagne-500 text-obsidian font-bold";
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const status = document.getElementById('form-status');
+            status.classList.remove('hidden');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
